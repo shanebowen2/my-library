@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+      
+
+    <hr />
+
+    {% if books|length == 0 %}
+    <p>No books yet!</p>
+    {% else %}
+
+    <ul>
+        {% for book in books %}
+        <li><h2><a href='/blog?user={{author.id}}'>{{author.email}}</a></h2>
+            
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+
+        {% endif %}
+
+        <hr />
+
+      
+
+{% endblock %}
